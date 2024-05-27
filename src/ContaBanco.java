@@ -1,10 +1,10 @@
 package src;
 
 public class ContaBanco {
-    int numero;
-    String agencia;
-    String nomeClient;
-    double saldo;
+    private int numero;
+    private String agencia;
+    private String nomeClient;
+    private double saldo;
 
     public ContaBanco(int numero, String agencia, String nomeClient, double saldo) {
         this.numero = numero;
@@ -43,5 +43,9 @@ public class ContaBanco {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public void saudacao() {
+        System.out.printf("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %.2f já está disponível para saque.",nomeClient,agencia,numero,saldo);
     }
 }
